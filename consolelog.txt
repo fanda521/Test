@@ -1,0 +1,657 @@
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /
+$ pwd
+/
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /
+$ g:
+bash: g:: command not found
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /
+$ dir
+bin  dev  git-bash.exe  LICENSE.txt  proc               tmp           unins000.exe  usr
+cmd  etc  git-cmd.exe   mingw64      ReleaseNotes.html  unins000.dat  unins000.msg
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /
+$ G:
+bash: G:: command not found
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /
+$ cd g:
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g
+$ pwd
+/g
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g
+$ dir
+$RECYCLE.BIN   Download    jQuery-js           Others                       upload
+2019年6月四级  DxDiag.txt  Maven               System\ Volume\ Information
+BootStrap      GitHub      OracleVMVirtualBox  temp
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g
+$ cd GitHub/
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub
+$ dir
+bootstrap  clone  localRepository  ssh  testGit
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub
+$ mkdir Test
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub
+$ dir
+bootstrap  clone  localRepository  ssh  Test  testGit
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub
+$ cd Test
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test
+$ pwd
+/g/GitHub/Test
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test
+$ git init
+Initialized empty Git repository in G:/GitHub/Test/.git/
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ md readme.txt
+bash: md: command not found
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ git add readme.txt
+fatal: pathspec 'readme.txt' did not match any files
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ dir
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ touch readme.txt
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ dir
+readme.txt
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ git add readme.txt
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ git commit -m "readme.txt 提交"
+[master (root-commit) 8c9da03] readme.txt 提交
+ 1 file changed, 1 insertion(+)
+ create mode 100644 readme.txt
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ git status
+On branch master
+nothing to commit, working directory clean
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   readme.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ git diff readme.txt
+diff --git a/readme.txt b/readme.txt
+index 6fff8d1..40fc850 100644
+--- a/readme.txt
++++ b/readme.txt
+@@ -1 +1,2 @@
+-11111111111
+\ No newline at end of file
++11111111111
++22222222222
+\ No newline at end of file
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ git add readme.txt
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   readme.txt
+
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ git commit -m "文件增加了22222222内容"
+[master 5f6b49d] 文件增加了22222222内容
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ git status
+On branch master
+nothing to commit, working directory clean
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ git add readme.txt
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ git commit -m "文件增加了333333333内容"
+[master ec97d51] 文件增加了333333333内容
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ git status
+On branch master
+nothing to commit, working directory clean
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ git log
+commit ec97d5101f25fb0e51498a655a7e532bb68cb3f9
+Author: fanda521 <1056015243@qq.com>
+Date:   Wed Oct 9 16:26:31 2019 +0800
+
+    文件增加了333333333内容
+
+commit 5f6b49d5ddd07d3d402acdfd2e32d71308432633
+Author: fanda521 <1056015243@qq.com>
+Date:   Wed Oct 9 16:23:02 2019 +0800
+
+    文件增加了22222222内容
+
+commit 8c9da03403c2bccf6e93a34794c7b998b56d0dd7
+Author: fanda521 <1056015243@qq.com>
+Date:   Wed Oct 9 16:18:55 2019 +0800
+
+    readme.txt 提交
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ git log -pretty=oneline
+fatal: unrecognized argument: -pretty=oneline
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ git log --pretty=oneline
+ec97d5101f25fb0e51498a655a7e532bb68cb3f9 文件增加了333333333内容
+5f6b49d5ddd07d3d402acdfd2e32d71308432633 文件增加了22222222内容
+8c9da03403c2bccf6e93a34794c7b998b56d0dd7 readme.txt 提交
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ git reset --hard HEAD^
+HEAD is now at 5f6b49d 文件增加了22222222内容
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ cat readme.txt
+11111111111
+22222222222
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ git log --pretty=oneline
+5f6b49d5ddd07d3d402acdfd2e32d71308432633 文件增加了22222222内容
+8c9da03403c2bccf6e93a34794c7b998b56d0dd7 readme.txt 提交
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ git reflog
+5f6b49d HEAD@{0}: reset: moving to HEAD^
+ec97d51 HEAD@{1}: commit: 文件增加了333333333内容
+5f6b49d HEAD@{2}: commit: 文件增加了22222222内容
+8c9da03 HEAD@{3}: commit (initial): readme.txt 提交
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ git reset --hard 8c9da03
+HEAD is now at 8c9da03 readme.txt 提交
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ git reset --hard ec97d51
+HEAD is now at ec97d51 文件增加了333333333内容
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ cat readme.txt
+11111111111
+22222222222
+33333333333
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ touch test.txt
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   readme.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        test.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ git add readme.txt
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ git add test.txt
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   readme.txt
+        new file:   test.txt
+
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ git commit -m "一次性提交所有文件，readme.txt的修改和test.txt的新建"
+[master e4e66a6] 一次性提交所有文件，readme.txt的修改和test.txt的新建
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+ create mode 100644 test.txt
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ git status
+On branch master
+nothing to commit, working directory clean
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ dir
+readme.txt  test.txt
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ git status
+On branch master
+nothing to commit, working directory clean
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ git add readme.txt
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ git commit -m "add 5555555 666666666 commit"
+[master 86dceb4] add 5555555 666666666 commit
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   readme.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ git reflog
+86dceb4 HEAD@{0}: commit: add 5555555 666666666 commit
+e4e66a6 HEAD@{1}: commit: 一次性提交所有文件，readme.txt的修改和test.txt的新建
+ec97d51 HEAD@{2}: reset: moving to ec97d51
+8c9da03 HEAD@{3}: reset: moving to 8c9da03
+5f6b49d HEAD@{4}: reset: moving to HEAD^
+ec97d51 HEAD@{5}: commit: 文件增加了333333333内容
+5f6b49d HEAD@{6}: commit: 文件增加了22222222内容
+8c9da03 HEAD@{7}: commit (initial): readme.txt 提交
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ cat readme.txt
+11111111111
+22222222222
+33333333333
+44444444444
+55555555555
+66666666666
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ git add readme.txt
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ git commit -m "add 666666666"
+[master e2b90fe] add 666666666
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ git status
+On branch master
+nothing to commit, working directory clean
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   readme.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ git checkout --readme.txt
+error: unknown option `readme.txt'
+usage: git checkout [<options>] <branch>
+   or: git checkout [<options>] [<branch>] -- <file>...
+
+    -q, --quiet           suppress progress reporting
+    -b <branch>           create and checkout a new branch
+    -B <branch>           create/reset and checkout a branch
+    -l                    create reflog for new branch
+    --detach              detach the HEAD at named commit
+    -t, --track           set upstream info for new branch
+    --orphan <new-branch>
+                          new unparented branch
+    -2, --ours            checkout our version for unmerged files
+    -3, --theirs          checkout their version for unmerged files
+    -f, --force           force checkout (throw away local modifications)
+    -m, --merge           perform a 3-way merge with the new branch
+    --overwrite-ignore    update ignored files (default)
+    --conflict <style>    conflict style (merge or diff3)
+    -p, --patch           select hunks interactively
+    --ignore-skip-worktree-bits
+                          do not limit pathspecs to sparse entries only
+    --ignore-other-worktrees
+                          do not check if another worktree is holding the given ref
+    --progress            force progress reporting
+
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ git checkout -- readme.txt
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ git status
+On branch master
+nothing to commit, working directory clean
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ cat readme.txt
+11111111111
+22222222222
+33333333333
+44444444444
+55555555555
+66666666666
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ git add readme.txt
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   readme.txt
+
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   readme.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   readme.txt
+
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ cat readme.txt
+11111111111
+22222222222
+33333333333
+44444444444
+55555555555
+66666666666
+
+77777777777
+88888888888
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ git checkout -- readme.txt
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   readme.txt
+
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ cat readme.txt
+11111111111
+22222222222
+33333333333
+44444444444
+55555555555
+66666666666
+
+77777777777
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ git checkout -- readme.txt
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ cat readme.txt
+11111111111
+22222222222
+33333333333
+44444444444
+55555555555
+66666666666
+
+77777777777
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ git reset --hard HEAD
+HEAD is now at e2b90fe add 666666666
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ cat readme.txt
+11111111111
+22222222222
+33333333333
+44444444444
+55555555555
+66666666666
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ touch test2.txt
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ git add test2.txt
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   test2.txt
+
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ dir
+readme.txt  test.txt  test2.txt
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ rm test2.txt
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ dir
+readme.txt  test.txt
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   test2.txt
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        deleted:    test2.txt
+
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ git rm test2.txt
+rm 'test2.txt'
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ git status
+On branch master
+nothing to commit, working directory clean
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ dir
+readme.txt  test.txt
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ touch test2.txt
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ git add test2.txt
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   test2.txt
+
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ git commit -m "new test2.txt"
+[master 1a3aea0] new test2.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test2.txt
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ git status
+On branch master
+nothing to commit, working directory clean
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ rm test2.txt
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        deleted:    test2.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ dir
+readme.txt  test.txt
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ git checkout -- test2.txt
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ dir
+readme.txt  test.txt  test2.txt
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ git remote add origin git@github.com:fanda521/Test.git
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ git push -u origin master
+To git@github.com:fanda521/Test.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'git@github.com:fanda521/Test.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ git remote add origin https://github.com/fanda521/Test.git
+fatal: remote origin already exists.
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ git push -u origin master
+To git@github.com:fanda521/Test.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'git@github.com:fanda521/Test.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ git push origin master
+To git@github.com:fanda521/Test.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'git@github.com:fanda521/Test.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ git status
+On branch master
+nothing to commit, working directory clean
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ git pull --rebase origin master
+warning: no common commits
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+Unpacking objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+From github.com:fanda521/Test
+ * branch            master     -> FETCH_HEAD
+ * [new branch]      master     -> origin/master
+First, rewinding head to replay your work on top of it...
+Applying: readme.txt 提交
+Applying: 文件增加了22222222内容
+Applying: 文件增加了333333333内容
+Applying: 一次性提交所有文件，readme.txt的修改和test.txt的新建
+Applying: add 5555555 666666666 commit
+Applying: add 666666666
+Applying: new test2.txt
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ git push -u origin master
+Counting objects: 21, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (16/16), done.
+Writing objects: 100% (21/21), 1.92 KiB | 0 bytes/s, done.
+Total 21 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), done.
+To git@github.com:fanda521/Test.git
+   b5e4724..195b039  master -> master
+Branch master set up to track remote branch master from origin.
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ dir
+README.md  readme.txt  test.txt  test2.txt
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ git clone git@github.com:fanda521/testGit.git
+Cloning into 'testGit'...
+remote: Enumerating objects: 53, done.
+remote: Counting objects: 100% (53/53), done.
+remote: Compressing objects: 100% (27/27), done.
+remote: Total 53 (delta 18), reused 47 (delta 15), pack-reused 0
+Receiving objects: 100% (53/53), 4.82 KiB | 0 bytes/s, done.
+Resolving deltas: 100% (18/18), done.
+Checking connectivity... done.
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
+$ dir
+README.md  readme.txt  test.txt  test2.txt  testGit
+
+Fiee@DESKTOP-VPGVG52 MINGW64 /g/GitHub/Test (master)
